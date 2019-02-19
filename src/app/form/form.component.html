@@ -1,0 +1,79 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group col-md-4" >
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" formControlName="nome" [ngClass]="aplicaCSSErro('nome')">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="nascimento">Nascimento</label>
+      <input type="date" class="form-control" id="nascimento" formControlName="nascimento" [ngClass]="aplicaCSSErro('nascimento')">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="serie">Série</label>
+      <input type="text" class="form-control" id="serie" formControlName="serie" [ngClass]="aplicaCSSErro('serie')">
+    </div>
+  </div>
+  
+  <!--<div ngModelGroup="endereco">-->
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="cep">CEP</label>
+        <input type="text" class="form-control" id="cep" formControlName="cep" [ngClass]="aplicaCSSErro('cep')" (blur)="consultaCEP()">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="rua">Rua</label>
+        <input type="text" class="form-control" id="rua" formControlName="rua" [ngClass]="aplicaCSSErro('rua')">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="numero">Número</label>
+        <input type="text" class="form-control" id="numero" formControlName="numero" [ngClass]="aplicaCSSErro('numero')">
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="complemento">Complemento</label>
+      <input type="text" class="form-control" id="complemento" formControlName="complemento" [ngClass]="aplicaCSSErro('complemento')">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="bairro">Bairro</label>
+        <input type="text" class="form-control" id="bairro" formControlName="bairro" [ngClass]="aplicaCSSErro('bairro')">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="cidade">Cidade</label>
+        <input type="text" class="form-control" id="cidade" formControlName="cidade" [ngClass]="aplicaCSSErro('cidade')">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="estado">Estado</label>
+        <select class="form-control" id="estado" formControlName="estado" [ngClass]="aplicaCSSErro('estado')">
+          <option *ngFor="let estado of estados | async" [value]="estado.sigla">{{estado.nome}}</option>
+        </select>
+      </div>
+    </div>
+  <hr>
+
+  <p>
+    <strong>Dados da Mãe</strong>
+  </p>
+  <!--<div ngModelGroup="mae">-->
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="mae">Nome</label>
+        <input type="text" class="form-control" id="mae" formControlName="mae" [ngClass]="aplicaCSSErro('mae')">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="cpf">Cpf</label>
+        <input type="text" class="form-control" id="cpf" formControlName="cpf" [ngClass]="aplicaCSSErro('cpf')">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="dia_pagamento">Data pagamento</label>
+        <input type="number" class="form-control" id="dia_pagamento" formControlName="dia_pagamento" [ngClass]="aplicaCSSErro('dia_pagamento')">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Limpar</button>
+      <button  type="submit" class="btn btn-primary">Salvar</button>
+      <button (click)="update()" type="button" class="btn btn-primary">Salvar Edição</button>
+    </div>
+
+<app-form-debug [form]="formulario"></app-form-debug>
+</form>

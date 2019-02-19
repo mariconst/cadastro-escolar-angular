@@ -1,0 +1,27 @@
+<table class="table table-striped" *ngIf="estudantes$ | async as estudantes; else loading;">
+    <thead>
+        <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Série</th>
+        <th scope="col">Nascimento</th>
+        <th scope="col">Mãe</th>
+        <th scope="col">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let estudante of estudantes">
+            <th scope="row">{{estudante.nome}}</th>
+            <td>{{estudante.serie}}</td>
+            <td>{{estudante.nascimento}}</td>
+            <td>{{estudante.mae}}</td>
+            <td scope="col">
+                <button type="button" class="btn btn-primary" routerLink="/form/{{estudante.id}}" >Ver/Editar</button>
+                <button type="button" class="btn btn-danger" (click)="DeleteEstudate(estudante.id, estudante.nome)" >Excluir</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<ng-template #loading>
+    <span>Carregando...</span>
+</ng-template>
