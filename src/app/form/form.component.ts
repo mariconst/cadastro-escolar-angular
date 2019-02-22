@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
     private estudanteServices: EstudantesService, 
     private activetedRoute: ActivatedRoute, 
     private formBuilder: FormBuilder
-  ) { }
+  ) {}
 
   ngOnInit() {
     
@@ -50,10 +50,10 @@ export class FormComponent implements OnInit {
    
     if(this.id>0){
       this.editing = true;
-      //this.estudantes = this.estudanteServices.getOne(this.id);
       this.estudanteServices.getOne(this.id).subscribe((data: Estudantes[]) => this.popularDadosEstudante(data));
       
     }
+    
   }
 
   
@@ -77,7 +77,7 @@ export class FormComponent implements OnInit {
    
   }
 
-
+ 
   resetForm(){
     this.formulario.reset();
   }
@@ -96,6 +96,9 @@ export class FormComponent implements OnInit {
         //Consulta o webservice viacep.com.br/
         this.estudanteServices.getCEP(cep)
           .subscribe(dados => this.popularDadosCEP(dados));
+      }else{
+        alert('CEP inválido!');
+        this.resetCEP();
       }
     }
   }
@@ -144,7 +147,7 @@ export class FormComponent implements OnInit {
     }
   }
 
-  update(id){
+  update(){
     if(this.formulario.valid){
       this.estudanteServices.update(this.formulario, this.id).subscribe((data) => {
         alert('Salvo com sucesso!');

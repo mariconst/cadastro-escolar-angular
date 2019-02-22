@@ -71,8 +71,8 @@
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" (click)="resetForm()">Limpar</button>
-      <button  type="submit" class="btn btn-primary">Salvar</button>
-      <button (click)="update()" type="button" class="btn btn-primary">Salvar Edição</button>
+      <button  *ngIf="!editing" type="submit" class="btn btn-primary">Salvar</button>
+      <button *ngIf="editing" (click)="update()" type="button" class="btn btn-primary">Salvar Edição</button>
     </div>
 
 <app-form-debug [form]="formulario"></app-form-debug>

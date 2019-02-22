@@ -14,15 +14,20 @@ export class HomeComponent implements OnInit {
   constructor(private estudanteService: EstudantesService) {}
 
   ngOnInit() {
+    this.buscarEstudante();
+  }
+
+  buscarEstudante(){
     this.estudantes$ = this.estudanteService.get();
   }
 
-  DeleteEstudate(id, nome){
+  deleteEstudate(id, nome){
     if(confirm('Deseja excluir o estudante '+nome+ '?')){
       this.estudanteService.delete(id).subscribe(
       res => {
         console.log(res);
         alert('Excluido com sucesso');
+        this.buscarEstudante();
         
       }, erro => {
         console.log(erro);

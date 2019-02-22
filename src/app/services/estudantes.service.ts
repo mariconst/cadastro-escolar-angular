@@ -42,8 +42,9 @@ export class EstudantesService {
   }
 
   update(form, id){
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
     console.log(id);
-    return this.httpCliente.put(this.API_ENDPOINT + '/estudantes', JSON.stringify(form.value), id );
+    return this.httpCliente.put(this.API_ENDPOINT + '/estudantes/'+id, JSON.stringify(form.value), {headers:headers});
   }
 
   delete(id){
