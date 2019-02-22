@@ -12,7 +12,7 @@
         <tr *ngFor="let estudante of estudantes">
             <th scope="row">{{estudante.nome}}</th>
             <td>{{estudante.serie}}</td>
-            <td>{{estudante.nascimento}}</td>
+            <td>{{estudante.nascimento | date: 'dd/MM/yyyy'}}</td>
             <td>{{estudante.mae}}</td>
             <td scope="col">
                 <button type="button" class="btn btn-primary" routerLink="/form/{{estudante.id}}" >Ver/Editar</button>

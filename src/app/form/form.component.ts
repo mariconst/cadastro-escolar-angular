@@ -43,7 +43,7 @@ export class FormComponent implements OnInit {
       cidade: [null, Validators.required],
       estado: [null, Validators.required],
       mae: [null, Validators.required],
-      cpf: [null, Validators.required],
+      cpf: [null, [Validators.required, Validators.pattern(/^(\d{3}\.){2}\d{3}\-\d{2}$/)]],
       dia_pagamento: [null, Validators.required]
     });
 
