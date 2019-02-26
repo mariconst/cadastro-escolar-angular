@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Estudantes } from '../interfaces/estudantes';
 import { EstudantesService } from '../services/estudantes.service';
-import { ActivatedRoute } from '../../../node_modules/@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Observable } from '../../../node_modules/rxjs';
+import { Observable } from 'rxjs';
 import { EstadosBr } from '../interfaces/estadosbr';
 
 
@@ -43,7 +43,7 @@ export class FormComponent implements OnInit {
       cidade: [null, Validators.required],
       estado: [null, Validators.required],
       mae: [null, Validators.required],
-      cpf: [null, [Validators.required, Validators.pattern(/^(\d{3}\.){2}\d{3}\-\d{2}$/)]],
+      cpf: [null, [Validators.required]],
       dia_pagamento: [null, Validators.required]
     });
 

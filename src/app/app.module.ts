@@ -8,6 +8,7 @@ import { Route, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { ValidaCpfDirective } from './shared/valida-cpf.directive';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -20,7 +21,8 @@ const routes: Route[] = [
   declarations: [
     AppComponent,
     HomeComponent,
-    FormComponent
+    FormComponent,
+    ValidaCpfDirective
   ],
   imports: [
     BrowserModule,
