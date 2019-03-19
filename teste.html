@@ -1,0 +1,195 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Title -->
+    <title>Title</title>
+    <!-- Meta -->
+    <meta name="description" content="Interactive Website">
+    <meta name="author" content="Nazmul Hussain">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pedidos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Novo</a>
+              <a class="dropdown-item" href="#">Listagem</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+   
+</head>
+
+<body>
+     
+
+    <div class="container">
+
+
+        
+
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                  <h5 class="card-header">Dados do Cliente</h5>
+                  <div class="card-body">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="form-group mx-sm-3">
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="CPF">
+                            </div>
+                            <div class="form-group mx-sm-1">
+                                <button type="submit" class="btn btn-primary ml-2"><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="form-group mx-sm-3">
+                                <label for="validationServer01">Mariana Constantino</label>
+                            </div>
+                            <div class="form-group mx-sm-3">
+                                <label for="validationServer01">marianac.c@outlook.com</label>
+                            </div>
+                        </div>
+                       
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                  <h5 class="card-header">Produtos</h5>
+                  <div class="card-body">
+                    <form class="">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                              <label for="validationCustom02">Produto</label>
+                              <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                            </div>
+                            <div class="col-md-5">
+                              <label for="validationCustomUsername">Quantidade</label>
+                              
+                                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                  Please choose a username.
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <button class="btn btn-success" style="margin-top: 2rem;" type="submit"><strong>+</strong></button>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-8">
+                <div class="card">
+                  <h5 class="card-header">Itens</h5>
+                  <div class="card-body">
+                    <div class="table-responsive-md">
+                        <table class="table">
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Macarrão</td>
+                              <td>
+                                  <button class="btn btn-light btn-sm"><i class="fas fa-minus-circle"></i></button>5<button class="btn btn-light btn-sm"><i class="fas fa-plus-circle"></i></button>
+                              </td>
+                              <td>3.99</td>
+                              <td><button type="button" class="btn btn-danger">Remover</button></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Fanta Uva</td>
+                              <td>
+                                 <button class="btn btn-light btn-sm"><i class="fas fa-minus-circle"></i></button>2 <button class="btn btn-light btn-sm"><i class="fas fa-plus-circle"></i></button>
+                              </td>
+                              <td>5.50</td>
+                              <td><button type="button" class="btn btn-danger">Remover</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Pão</td>
+                                <td>
+                                    <button class="btn btn-light btn-sm"><i class="fas fa-minus-circle"></i></button>12<button class="btn btn-light btn-sm"><i class="fas fa-plus-circle"></i></button>
+                                </td>
+                                <td>2.00</td>
+                              <td><button type="button" class="btn btn-danger">Remover</button></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                  <h5 class="card-header">Total</h5>
+                  <div class="card-body">
+                    
+                    <div class="panel-body">
+                            <div class="col-md-12">
+                                <strong>Subtotal (# item)</strong>
+                                <div class="float-right"><span>$</span><span>200.00</span></div>
+                            </div>
+                            <div class="col-md-12">
+                                <strong>Tax</strong>
+                                <div class="float-right"><span>$</span><span>200.00</span></div>
+                            </div>
+                            <div class="col-md-12">
+                                <small>Shipping</small>
+                                <div class="float-right"><span>-</span></div>
+                                <hr>
+                            </div>
+                            <div class="col-md-12">
+                                <strong>Order Total</strong>
+                                <div class="float-right"><span>$</span><span>150.00</span></div>
+                                <hr>
+                            </div>
+                            
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Finalizar</button>
+                                
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
